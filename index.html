@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover a more considered way to travel with Air India. Explore destinations and plan your next journey.">
+  <title>Air India — Your world, closer</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Air India home">
+      <svg class="brand-mark" viewBox="0 0 42 42" role="img" aria-label="Air India emblem">
+        <path d="M21 2.5 24.7 16l12.8-5.7-9.2 10.1 9.2 10.1-12.8-5.7L21 38.5l-3.7-13.7-12.8 5.7 9.2-10.1-9.2-10.1L17.3 16 21 2.5Z" fill="currentColor"/>
+        <circle cx="21" cy="21" r="3.3" fill="#fff"/>
+      </svg>
+      <span class="brand-name">air india</span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#booking">Book &amp; Manage</a>
+      <a href="#destinations">Where We Fly</a>
+      <a href="#travel-info">Prepare to Travel</a>
+      <a href="#experience">Air India Experience</a>
+      <a href="#loyalty">Loyalty</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="sign-in" href="#sign-in">Sign in</a>
+      <button class="icon-button search-toggle" type="button" aria-label="Go to flight search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="Airplane flying above the clouds at golden hour"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow hero-eyebrow">The world is waiting</p>
+        <h1 id="hero-title">Your world,<br><em>closer.</em></h1>
+        <p class="hero-copy">Welcome to a world of exceptional travel. Wherever you’re headed, let the journey be something special.</p>
+        <a class="button button-light" href="#booking">Plan your journey <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-caption"><span>01</span><span class="caption-line"></span><span>Made for journeys that matter</span></div>
+    </section>
+
+    <section class="booking-wrap" id="booking" aria-labelledby="booking-title">
+      <div class="booking-card">
+        <div class="booking-heading">
+          <div>
+            <p class="eyebrow">Let’s get you there</p>
+            <h2 id="booking-title">Book your flight</h2>
+          </div>
+          <a class="manage-booking" href="#manage-booking">Manage booking <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <form class="flight-form" id="flight-form">
+          <fieldset class="trip-type">
+            <legend class="visually-hidden">Trip type</legend>
+            <label><input type="radio" name="trip-type" value="round-trip" checked><span>Round trip</span></label>
+            <label><input type="radio" name="trip-type" value="one-way"><span>One way</span></label>
+          </fieldset>
+
+          <div class="flight-fields">
+            <label class="field location-field">
+              <span class="field-label">From</span>
+              <span class="input-with-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+                <input name="from" type="text" list="airports" placeholder="Choose departure" value="Delhi (DEL)" required aria-label="Departure city">
+              </span>
+            </label>
+            <button class="swap-button" type="button" aria-label="Swap departure and destination">↔</button>
+            <label class="field location-field">
+              <span class="field-label">To</span>
+              <span class="input-with-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.3"/></svg>
+                <input name="to" type="text" list="airports" placeholder="Choose destination" value="London (LHR)" required aria-label="Destination city">
+              </span>
+            </label>
+            <datalist id="airports">
+              <option value="Delhi (DEL)"></option>
+              <option value="Mumbai (BOM)"></option>
+              <option value="Bengaluru (BLR)"></option>
+              <option value="London (LHR)"></option>
+              <option value="Dubai (DXB)"></option>
+              <option value="Singapore (SIN)"></option>
+              <option value="New York (JFK)"></option>
+            </datalist>
+            <label class="field date-field">
+              <span class="field-label">Departure</span>
+              <input name="departure" type="date" required aria-label="Departure date">
+            </label>
+            <label class="field date-field return-field">
+              <span class="field-label">Return</span>
+              <input name="return" type="date" required aria-label="Return date">
+            </label>
+            <label class="field select-field">
+              <span class="field-label">Passengers</span>
+              <select name="passengers" aria-label="Number of passengers">
+                <option value="1">1 passenger</option>
+                <option value="2">2 passengers</option>
+                <option value="3">3 passengers</option>
+                <option value="4">4 passengers</option>
+                <option value="5">5 passengers</option>
+                <option value="6">6 passengers</option>
+              </select>
+            </label>
+            <label class="field select-field">
+              <span class="field-label">Travel class</span>
+              <select name="travel-class" aria-label="Travel class">
+                <option>Economy</option>
+                <option>Premium Economy</option>
+                <option>Business</option>
+                <option>First Class</option>
+              </select>
+            </label>
+            <button class="button button-red search-flights" type="submit">Search flights <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="offers section-shell" id="experience" aria-labelledby="offers-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A little more for your journey</p>
+          <h2 id="offers-title">Offers made for you</h2>
+        </div>
+        <a class="text-link" href="#all-offers">View all offers <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-card">
+          <a class="offer-image offer-image-one" href="#offer-bali" aria-label="Explore the Bali offer"></a>
+          <div class="offer-copy">
+            <span class="offer-tag">A little escape</span>
+            <h3>Make room for more</h3>
+            <p>Save up to 15% on select international escapes.</p>
+            <a class="text-link" href="#offer-bali">Explore offer <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="offer-card">
+          <a class="offer-image offer-image-two" href="#offer-business" aria-label="Explore premium cabin offer"></a>
+          <div class="offer-copy">
+            <span class="offer-tag">Travel beautifully</span>
+            <h3>More ways to fly well</h3>
+            <p>Discover special fares in our premium cabins.</p>
+            <a class="text-link" href="#offer-business">Explore offer <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="offer-card">
+          <a class="offer-image offer-image-three" href="#offer-family" aria-label="Explore the family travel offer"></a>
+          <div class="offer-copy">
+            <span class="offer-tag">Together is better</span>
+            <h3>Bring everyone along</h3>
+            <p>Find thoughtful fares for your next family trip.</p>
+            <a class="text-link" href="#offer-family">Explore offer <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+      <p class="demo-note">Sample offers for this homepage demo. Fares and availability are illustrative.</p>
+    </section>
+
+    <section class="destinations section-shell" id="destinations" aria-labelledby="destinations-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A world of possibility</p>
+          <h2 id="destinations-title">Where to next?</h2>
+        </div>
+        <a class="text-link" href="#all-destinations">Discover all destinations <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="destination-grid">
+        <a class="destination-card destination-london" href="#booking"><span class="destination-country">United Kingdom</span><span class="destination-name">London <span aria-hidden="true">↗</span></span></a>
+        <a class="destination-card destination-dubai" href="#booking"><span class="destination-country">United Arab Emirates</span><span class="destination-name">Dubai <span aria-hidden="true">↗</span></span></a>
+        <a class="destination-card destination-singapore" href="#booking"><span class="destination-country">Singapore</span><span class="destination-name">Singapore <span aria-hidden="true">↗</span></span></a>
+        <a class="destination-card destination-mumbai" href="#booking"><span class="destination-country">India</span><span class="destination-name">Mumbai <span aria-hidden="true">↗</span></span></a>
+        <a class="destination-card destination-delhi" href="#booking"><span class="destination-country">India</span><span class="destination-name">Delhi <span aria-hidden="true">↗</span></span></a>
+        <a class="destination-card destination-new-york" href="#booking"><span class="destination-country">United States</span><span class="destination-name">New York <span aria-hidden="true">↗</span></span></a>
+      </div>
+    </section>
+
+    <section class="journey-banner" id="travel-info" aria-labelledby="journey-title">
+      <div class="journey-content">
+        <p class="eyebrow">A smoother journey starts here</p>
+        <h2 id="journey-title">Thoughtful details.<br>From take-off to landing.</h2>
+        <p>Make every part of your trip feel effortless. Find the information you need before you fly.</p>
+        <a class="button button-light" href="#travel-guide">Explore travel information <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="journey-decoration" aria-hidden="true">✳</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand-block">
+        <a class="brand footer-brand" href="#" aria-label="Air India home">
+          <svg class="brand-mark" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 2.5 24.7 16l12.8-5.7-9.2 10.1 9.2 10.1-12.8-5.7L21 38.5l-3.7-13.7-12.8 5.7 9.2-10.1-9.2-10.1L17.3 16 21 2.5Z" fill="currentColor"/><circle cx="21" cy="21" r="3.3" fill="#fff"/></svg>
+          <span class="brand-name">air india</span>
+        </a>
+        <p>Bringing the world a little closer, one journey at a time.</p>
+        <div class="social-links" aria-label="Social media">
+          <a href="https://www.instagram.com/airindia/" aria-label="Instagram">ig</a>
+          <a href="https://www.facebook.com/AirIndia/" aria-label="Facebook">f</a>
+          <a href="https://www.linkedin.com/company/air-india-limited/" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div class="footer-column" id="loyalty">
+        <h2>Discover</h2>
+        <a href="#about">About Air India</a>
+        <a href="#experience">Air India experience</a>
+        <a href="#destinations">Where we fly</a>
+        <a href="#loyalty">Flying Returns</a>
+      </div>
+      <div class="footer-column">
+        <h2>Plan your trip</h2>
+        <a href="#booking">Book a flight</a>
+        <a href="#manage-booking">Manage booking</a>
+        <a href="#travel-info">Travel information</a>
+        <a href="#baggage">Baggage</a>
+      </div>
+      <div class="footer-column">
+        <h2>We're here to help</h2>
+        <a href="#contact">Contact us</a>
+        <a href="#support">Customer support</a>
+        <a href="#privacy">Privacy policy</a>
+        <a href="#terms">Terms &amp; conditions</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Air India. All rights reserved.</span>
+      <span class="disclaimer">Independent homepage demo — not an official Air India booking website.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
